@@ -183,12 +183,11 @@ document.querySelectorAll(".tilt-card").forEach((card) => {
   });
 });
 
-document.querySelectorAll(".project-link").forEach((link) => {
+document.querySelectorAll(".project-link:not(.project-live)").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
     modalTitle.textContent = link.dataset.project;
     modal.classList.add("open");
-    modal.setAttribute("aria-hidden", "false");
   });
 });
 
